@@ -1,5 +1,5 @@
 import { request, gql } from 'graphql-request'
-//1:16
+//2:02
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT
 
 export const getPosts = async () => {
