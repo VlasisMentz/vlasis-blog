@@ -3,7 +3,7 @@ import { submitComment } from '../services'
 
 const CommentsForm = ({ slug }) => {
   const [error, setError] = useState(false)
-  // const [localStorage, setLocalStorage] = useState(null)
+  const [localStorage, setLocalStorage] = useState(null)
   const [showSuccessMessage, setShowSuccessMessage] = useState(false)
   const commentEl = useRef()
   const nameEl = useRef()
@@ -21,7 +21,7 @@ const CommentsForm = ({ slug }) => {
     const { value: comment } = commentEl.current
     const { value: name } = nameEl.current
     const { value: email } = emailEl.current
-    const { checked: storeData } = storeDataEl.current
+    // const { checked: storeData } = storeDataEl.current
 
     if (!comment || !name || !email) {
       setError(true)
@@ -101,7 +101,7 @@ const CommentsForm = ({ slug }) => {
         </button>
         {showSuccessMessage && (
           <span className="text-xl float-right font-semibold mt-3 text-green-500">
-            Comment Sub
+            Comment Submited
           </span>
         )}
       </div>
